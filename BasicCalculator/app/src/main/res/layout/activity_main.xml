@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/operations_text"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:gravity="end"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:text="1000-7"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/result_display"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:textSize="60sp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/operations_text"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:singleLine="true"
+        android:text="993"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintTop_toBottomOf="@id/result_display"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/MainTheme"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0sp"
+            app:layout_constraintTop_toBottomOf="@id/result_display">
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text="AC" />
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text="(" />
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text=")" />
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text="/" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainTheme"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0sp"
+            app:layout_constraintTop_toBottomOf="@id/result_display">
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="7" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="8" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="9" />
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text="*" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainTheme"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0sp"
+            app:layout_constraintTop_toBottomOf="@id/result_display">
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="4" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="5" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="6" />
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainTheme"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0sp"
+            app:layout_constraintTop_toBottomOf="@id/result_display">
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="1" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="2" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="3" />
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainTheme"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0sp"
+            app:layout_constraintTop_toBottomOf="@id/result_display">
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="0" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="00" />
+
+            <TextView
+                style="@style/DigitButtons"
+                android:text="." />
+
+            <TextView
+                style="@style/OperationButtons"
+                android:text="=" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
